@@ -103,7 +103,7 @@ st.markdown(f"""
 st.markdown("\n")
 
 # CSV 파일을 읽어와 DataFrame으로 저장
-df = pd.read_csv("contents\stock_price_changes_without_source.csv", encoding='utf-8-sig')
+df = pd.read_csv("stock_price_changes_without_source.csv", encoding='utf-8-sig')
 
 # DataFrame을 Streamlit에 표로 출력
 st.markdown(df.style.hide(axis="index").to_html(), unsafe_allow_html=True)
