@@ -51,14 +51,14 @@ st.markdown("\n")
 
 #결과 - 테이블
 # CSV 파일을 읽어와 DataFrame으로 저장
-df = pd.read_csv(".\contents\hyundai_glovis_contracts_sorted.csv", encoding='utf-8-sig')
+df = pd.read_csv("hyundai_glovis_contracts_sorted.csv", encoding='utf-8-sig')
 
 # DataFrame을 Streamlit에 표로 출력
 st.markdown(df.style.hide(axis="index").to_html(), unsafe_allow_html=True)
 
 #결과 - 차트
 # CSV 파일을 읽어와 DataFrame으로 저장
-df = pd.read_csv(".\contents\hyundai_glovis_stock_trend.csv", encoding='utf-8-sig')
+df = pd.read_csv("hyundai_glovis_stock_trend.csv", encoding='utf-8-sig')
 
 # Plotly를 사용한 선 그래프 생성
 fig = px.line(df, x=df.date, y='value', title='시계열 데이터 시각화')
